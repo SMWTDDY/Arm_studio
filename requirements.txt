@@ -1,0 +1,9 @@
+numpy
+gymnasium
+mani_skill
+h5py
+pyzmq
+piper_sdk
+python-can
+zarr
+opencv-python
