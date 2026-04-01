@@ -79,7 +79,7 @@ def main():
     while True:
         target_angle = math.sin(step_count * 0.05) * 0.35
         # 外部测试输入保持严格的 7 维
-        a = np.array([0, 0, 0, 0, 0, 0, 1]) 
+        a = np.ones(7, dtype=np.float32)
         action = a * target_angle
         obs, reward, terminated, truncated, info = env.step(action)
         env.render()

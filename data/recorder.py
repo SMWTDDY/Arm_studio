@@ -2,7 +2,6 @@ import h5py
 import numpy as np
 import os
 import time
-import glob
 
 class HDF5Recorder:
     def __init__(self, robot="piper", mode="joint", save_dir="datasets"):
@@ -42,7 +41,9 @@ class HDF5Recorder:
     def add_step(self, obs, action, reward):
         if not self.is_recording:
             return
-        self.obs_buffer.append(obs)
+        # 深度拷贝观察值，避免引用问题
+        import copy
+        self.obs_buffer.append(copy.deepcopy(obs))
         self.action_buffer.append(action)
         self.reward_buffer.append(reward)
         self.timestamp_buffer.append(time.time() - self.start_time)
@@ -58,29 +59,34 @@ class HDF5Recorder:
             return
             
         print(f"[Recorder] 正在保存轨迹: {self.file_path} (共 {len(self.action_buffer)} 步)")
+        
+        # 堆叠所有步骤的数据
+        stacked_obs = self._stack_obs(self.obs_buffer)
+        
         with h5py.File(self.file_path, "w") as f:
+            # 基础数据
             f.create_dataset("action", data=np.array(self.action_buffer, dtype=np.float32))
             f.create_dataset("reward", data=np.array(self.reward_buffer, dtype=np.float32))
             f.create_dataset("timestamp", data=np.array(self.timestamp_buffer, dtype=np.float32))
             
-            stacked_obs = self._stack_obs(self.obs_buffer)
-            if isinstance(stacked_obs, dict):
-                obs_group = f.create_group("observation")
-                self._save_dict_to_hdf5(obs_group, stacked_obs)
-            else:
-                f.create_dataset("observation.state", data=stacked_obs.astype(np.float32))
+            # 递归保存观察值字典
+            obs_group = f.create_group("observation")
+            self._save_dict_to_hdf5(obs_group, stacked_obs)
             
+            # 元数据
             f.attrs["total_frames"] = len(self.action_buffer)
             f.attrs["episode_name"] = self.episode_name
             f.attrs["control_mode"] = self.mode
+            f.attrs["recorded_at"] = time.ctime()
             
         print(f"[Recorder] 保存完成！")
 
     def _stack_obs(self, obs_list):
         if len(obs_list) == 0: return None
-        if isinstance(obs_list[0], dict):
+        first = obs_list[0]
+        if isinstance(first, dict):
             stacked = {}
-            for k in obs_list[0].keys():
+            for k in first.keys():
                 stacked[k] = self._stack_obs([obs[k] for obs in obs_list])
             return stacked
         else:
@@ -93,4 +99,9 @@ class HDF5Recorder:
                 sub_group = h5_group.create_group(k)
                 self._save_dict_to_hdf5(sub_group, v)
             else:
-                h5_group.create_dataset(k, data=v)
+                # 图像数据识别与压缩 (RGB 图像通常是 uint8)
+                if isinstance(v, np.ndarray) and len(v.shape) >= 4 and v.dtype == np.uint8:
+                    # 启用 gzip 压缩，级别为 4 (平衡速度与压缩率)
+                    h5_group.create_dataset(k, data=v, compression="gzip", compression_opts=4, chunks=True)
+                else:
+                    h5_group.create_dataset(k, data=v)

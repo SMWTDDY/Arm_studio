@@ -33,15 +33,15 @@ class PiperConveyorGraspEnv(BaseEnv):
         
         # 3. 创建流水线 (Kinematic)
         builder = self.scene.create_actor_builder()
-        builder.add_box_collision(half_size=[0.6, 0.15, 0.05])
-        builder.add_box_visual(half_size=[0.6, 0.15, 0.05], color=[0.3, 0.3, 0.3])
+        builder.add_box_collision(half_sizes=[0.6, 0.15, 0.05])
+        builder.add_box_visual(half_sizes=[0.6, 0.15, 0.05], color=[0.3, 0.3, 0.3])
         self.conveyor = builder.build_kinematic(name="conveyor")
         self.conveyor.set_pose(sapien.Pose([0.4, 0, 0.05]))
         
         # 4. 创建抓取目标方块 (Dynamic)
         builder = self.scene.create_actor_builder()
-        builder.add_box_collision(half_size=[0.02, 0.02, 0.02])
-        builder.add_box_visual(half_size=[0.02, 0.02, 0.02], color=[0.8, 0.2, 0.2])
+        builder.add_box_collision(half_sizes=[0.02, 0.02, 0.02])
+        builder.add_box_visual(half_sizes=[0.02, 0.02, 0.02], color=[0.8, 0.2, 0.2])
         self.target_block = builder.build(name="target_block")
 
     def _initialize_episode(self, env_idx: torch.Tensor, options: dict):

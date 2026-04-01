@@ -90,16 +90,16 @@ class PiperConveyorGraspEnv(BaseEnv):
         
         # 创建流水线 (Kinematic Actor)
         builder = self.scene.create_actor_builder()
-        builder.add_box_collision(half_size=[0.6, 0.15, 0.05])
-        builder.add_box_visual(half_size=[0.6, 0.15, 0.05], color=[0.3, 0.3, 0.3])
+        builder.add_box_collision(half_sizes=[0.6, 0.15, 0.05])
+        builder.add_box_visual(half_sizes=[0.6, 0.15, 0.05], color=[0.3, 0.3, 0.3])
         self.conveyor = builder.build_kinematic(name="conveyor")
         # 放置在机械臂前方，高度为 0.05，表面高度为 0.1
         self.conveyor.set_pose(sapien.Pose([0.4, 0, 0.05]))
         
         # 创建抓取目标方块 (Dynamic Actor)
         builder = self.scene.create_actor_builder()
-        builder.add_box_collision(half_size=[0.02, 0.02, 0.02])
-        builder.add_box_visual(half_size=[0.02, 0.02, 0.02], color=[0.8, 0.2, 0.2])
+        builder.add_box_collision(half_sizes=[0.02, 0.02, 0.02])
+        builder.add_box_visual(half_sizes=[0.02, 0.02, 0.02], color=[0.8, 0.2, 0.2])
         self.target_block = builder.build(name="target_block")
 
     def _initialize_episode(self, env_idx: torch.Tensor, options: dict):

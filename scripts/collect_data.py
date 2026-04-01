@@ -13,6 +13,7 @@ from teleop.keyboard_ik import KeyboardTeleop
 from teleop.real_to_sim import RealToSimTeleop
 from data.recorder import HDF5Recorder
 import mani_skill.envs 
+import environments.conveyor_env # 导入自定义传送带环境
 
 def main():
     parser = argparse.ArgumentParser(description="ArmStudio Data Collection")
@@ -22,14 +23,16 @@ def main():
                         help="Control space: 'joint' or 'pose'.")
     parser.add_argument("--binary_gripper", action="store_true",
                         help="Use binary gripper control (-1 or 1).")
+    parser.add_argument("--env_name", type=str, default="PiperConveyor-v0",
+                        help="Environment UID to run.")
     args = parser.parse_args()
 
     # 1. 环境初始化
     control_mode = "pd_ee_pose" if args.mode == "pose" else "pd_joint_pos"
     
     env = gym.make(
-        "Empty-v1", 
-        obs_mode="state",
+        args.env_name, 
+        obs_mode="rgb+state", # 关键：开启视觉画面的采集
         control_mode=control_mode,
         robot_uids="piper_arm",
         num_envs=1,
