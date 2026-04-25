@@ -7,7 +7,7 @@ import time
 # 自动将项目根目录添加到 Python 路径
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from models.piper.agent import PiperArm, PiperActionWrapper
+from robot.piper.agent import PiperArm, PiperActionWrapper
 from teleop.get_pose import get_pose
 import mani_skill.envs
 

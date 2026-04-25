@@ -2,7 +2,10 @@ import numpy as np
 import time
 import threading
 from pyAgxArm import create_agx_arm_config, AgxArmFactory
-from teleop.get_pose import get_pose
+import os
+import sys
+sys.path.append(os.path.dirname(__file__))  # 添加当前目录到路径，以便导
+from get_pose import get_pose
 
 class RealToSimTeleop:
     """
@@ -41,6 +44,8 @@ class RealToSimTeleop:
         # 缓存最新的 action [j1..j6, g] 或 [x..yaw, g]
         self._latest_joints = np.zeros(7, dtype=np.float32)
         self._latest_pose = np.zeros(7, dtype=np.float32)
+        self._latest_gripper_width = 0.0
+        self._last_pose_action = None
         
         # 默认夹爪关闭
         self._latest_joints[6] = -1.0
@@ -72,6 +77,7 @@ class RealToSimTeleop:
                 
                 if gripper_data is not None:
                     width = gripper_data.msg.width
+                    self._latest_gripper_width = float(np.clip(width, 0.0, 0.035))
                     # 映射夹爪宽度到二进制 (-1 or 1) 供某些控制器使用
                     self._latest_joints[6] = 1.0 if width > self.gripper_threshold else -1.0
                     self._latest_pose[6] = 1.0 if width > self.gripper_threshold else -1.0
@@ -84,24 +90,41 @@ class RealToSimTeleop:
             
             time.sleep(0.005) # 200Hz
 
-    def get_action(self, mode="joint", use_binary_gripper=True):
+    def get_action(
+        self,
+        mode="joint",
+        use_binary_gripper=True,
+        pose_delta=False,
+        max_pos_delta=0.02,
+        max_rot_delta=0.15,
+    ):
         """
         返回当前最新的 7 维 Action
         Args:
             mode: "joint" (返回关节角) 或 "pose" (返回位姿)
             use_binary_gripper: 是否返回二值化后的夹爪控制信号
+            pose_delta: 在 pose 模式下返回相对上一帧的增量，适配 pd_ee_pose(use_delta=True)
         """
         if mode == "pose":
             action = self._latest_pose.copy()
+            if pose_delta:
+                current_pose = action[:6].copy()
+                if self._last_pose_action is None:
+                    action[:6] = 0.0
+                else:
+                    delta = current_pose - self._last_pose_action
+                    delta[3:6] = (delta[3:6] + np.pi) % (2 * np.pi) - np.pi
+                    delta[:3] = np.clip(delta[:3], -max_pos_delta, max_pos_delta)
+                    delta[3:6] = np.clip(delta[3:6], -max_rot_delta, max_rot_delta)
+                    action[:6] = delta
+                self._last_pose_action = current_pose
         else:
             action = self._latest_joints.copy()
+            self._last_pose_action = None
             
         # 如果不使用二值化，则返回物理宽度 (m)
         if not use_binary_gripper:
-            # 重新读取一次物理宽度（或从缓存中提取，这里简化处理）
-            gripper_data = self.effector.get_gripper_ctrl_states()
-            if gripper_data is not None:
-                action[6] = gripper_data.msg.width
+            action[6] = self._latest_gripper_width
         
         return action
 

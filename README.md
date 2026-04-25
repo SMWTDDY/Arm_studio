@@ -1,59 +1,175 @@
-# ArmStudio - Piper 机械臂仿真遥操与数据采集系统
+# Arm Studio
 
-ArmStudio 是一个专为 Piper 机械臂设计的轻量级仿真与数据采集框架。它实现了真实机械臂与 ManiSkill 仿真环境的深度对齐，支持高精度的轨迹录制，生成的 HDF5 数据完全兼容 `Api_test` 及 `LeRobot` 规范。
+Arm Studio is a Piper robotic arm workspace for ManiSkill simulation, real-to-sim teleoperation, dataset collection, pose-action standardization, and vision diffusion policy training.
 
-## ✨ 核心特性
+The recommended control/data path is:
 
-- **双空间同步**：支持关节空间（Joint）与笛卡尔位姿空间（Pose）的实时同步遥操。
-- **高精度对齐**：正向运动学（FK）解算直接基于 URDF 原生参数构建，确保仿真与现实骨架一致。
-- **自动化录制**：支持单次运行录制多条轨迹，文件名自动按 `000-999` 序列递增。
-- **灵活控制**：集成 `PiperActionWrapper` 自动处理 7D 意图到 8D 物理控制的映射。
-- **夹爪模式**：支持连续宽度控制（对齐实机）与二值化控制（对齐强化学习）。
+```text
+record pose action -> train pose policy -> decode xyz + rot6d -> pose action -> BoundedPiperIK -> pd_joint_pos
+```
 
-## 🚀 快速开始
+Actions stored for training use:
 
-### 1. 环境准备
-确保已激活 Conda 环境并安装必要依赖：
+```text
+action = [x, y, z, roll, pitch, yaw, gripper]
+```
+
+During training, pose rotation is encoded as 6D rotation and gripper is trained as a binary classifier:
+
+```text
+continuous_action = [x, y, z, rotation_6d]
+gripper_label = 0/1
+```
+
+## Environment
+
+Use the existing conda environment if available:
+
 ```bash
 conda activate SL
+```
+
+Install Python dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. 启动采集
-项目使用 `scripts/record.sh` 作为统一入口，支持透传所有 Python 参数：
+For training-only machines, this smaller list is also available:
 
 ```bash
-# 默认：关节模式 + 连续夹爪
-bash scripts/record.sh --mode joint
-
-# 进阶：位姿模式 + 二值化夹爪
-bash scripts/record.sh --mode pose --binary_gripper
+pip install -r training/Diffusion_Training/requirements.txt
 ```
 
-### 3. 录制快捷键
-程序启动并进入仿真画面后，使用以下键位控制流程：
-- **`[R]`**：**开始录制**新轨迹（会在控制台提示当前文件名）。
-- **`[S]`**：**停止并保存**当前轨迹（自动保存至 `datasets/`）。
-- **`[ESC]`**：安全保存并退出程序。
+Before training, confirm CUDA is visible:
 
-## 📂 目录结构
+```bash
+nvidia-smi
 
-- **`scripts/`**: 包含 `record.sh` 入口及 `collect_data.py` 核心采集逻辑。
-- **`teleop/`**: 
-  - `real_to_sim.py`: 基于 `pyAgxArm` 的真机数据流解析。
-  - `get_pose.py`: 基于 URDF 骨架的高精度正向运动学解算。
-- **`data/`**: `recorder.py` 负责 HDF5 序列化，支持自动命名。
-- **`models/`**: 定义 `PiperArm` 的仿真 Agent、控制器配置及 URDF 资产。
-- **`test/`**: 包含位姿对比、CAN 通信等调试工具。
+/home/lebinge/miniforge3/envs/SL/bin/python - <<'PY'
+import torch
+print(torch.cuda.is_available())
+print(torch.cuda.device_count())
+if torch.cuda.is_available():
+    print(torch.cuda.get_device_name(0))
+PY
+```
 
-## 🛠 兼容性与规范
+The training script will run on CPU if CUDA is not available, but it will be very slow.
 
-本项目严格遵循以下对齐标准：
-1. **命名规范**：`piper_{mode}_recording_xxx.hdf5`。
-2. **数据结构**：
-   - `observation.state`: 19 维向量（6关节 + 6速度 + 6位姿 + 1夹爪）。
-   - `action`: 7 维控制向量。
-   - `timestamp`: 步进时间戳。
-3. **硬件库**：已全面转向 `pyAgxArm`，弃用旧版 `piper_sdk`。
+## Repository Layout
 
-详细设计说明请参阅：[COMPATIBILITY.md](COMPATIBILITY.md)
+```text
+robot/                         Piper agent, action wrapper, bounded IK
+environments/                  ManiSkill custom environments
+teleop/                        Real arm and keyboard teleoperation
+data/                          Data collection and dataset viewers
+scripts/                       User-facing commands and utilities
+scripts/data_tools/            Dataset conversion, validation, cache, video export
+models/DiffusionPolicy/        Vision diffusion policy model and inference policy
+training/Diffusion_Training/   Training script and training_config.py
+inference/                     Local/remote inference helpers
+docs/                          Usage notes and repository documentation
+outputs/                       Checkpoints, debug images, exported videos
+datasets/                      Local HDF5 datasets and generated caches
+```
+
+More detail is in [docs/REPO_STRUCTURE.md](docs/REPO_STRUCTURE.md). Chinese day-to-day usage notes are in [docs/USAGE.md](docs/USAGE.md).
+
+## Data Preparation
+
+Build one unified pose dataset from mixed joint and pose recordings:
+
+```bash
+/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/build_unified_pose_dataset.py \
+  "datasets/*.hdf5" \
+  "datasets/auto_collected_real/*.hdf5" \
+  --output-dir datasets/unified_pose_all \
+  --prefix piper_pose_unified
+```
+
+Build a resized image cache for faster vision training:
+
+```bash
+MPLCONFIGDIR=/tmp/matplotlib \
+/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/build_training_image_cache.py \
+  datasets/unified_pose_all \
+  --output-dir datasets/unified_pose_all_128 \
+  --image-size 128 \
+  --compression lzf
+```
+
+Validate pose replay quality:
+
+```bash
+/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/validate_pose_dataset.py \
+  "datasets/unified_pose_all/*.hdf5"
+```
+
+Export a few HDF5 videos for camera checks:
+
+```bash
+/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/export_hdf5_videos.py \
+  "datasets/unified_pose_all/*.hdf5" \
+  --output-dir outputs/dataset_videos/pose_camera_samples \
+  --fps 30 \
+  --max-frames 300
+```
+
+## Training
+
+Main configuration lives in:
+
+```text
+training/Diffusion_Training/training_config.py
+```
+
+Start training from the cached dataset:
+
+```bash
+MPLCONFIGDIR=/tmp/matplotlib \
+/home/lebinge/miniforge3/envs/SL/bin/python training/Diffusion_Training/train_diffusion_vision.py \
+  --data-dir datasets/unified_pose_all_128 \
+  --total-steps 100000 \
+  --save-every 5000 \
+  --num-workers 2
+```
+
+Checkpoints and the loss plot are written to:
+
+```text
+outputs/checkpoints/vision/
+```
+
+Resume training:
+
+```bash
+MPLCONFIGDIR=/tmp/matplotlib \
+/home/lebinge/miniforge3/envs/SL/bin/python training/Diffusion_Training/train_diffusion_vision.py \
+  --data-dir datasets/unified_pose_all_128 \
+  --resume outputs/checkpoints/vision/checkpoint_5000.pth \
+  --total-steps 100000 \
+  --save-every 5000 \
+  --num-workers 2
+```
+
+## Inference
+
+Run local inference with the trained checkpoint:
+
+```bash
+/home/lebinge/miniforge3/envs/SL/bin/python scripts/run_inference.py \
+  --mode local \
+  --model outputs/checkpoints/vision/final_vision_policy.pth \
+  --env environments/conveyor_env.py \
+  --ctrl_mode pose \
+  --binary_gripper \
+  --target_fps 60 \
+  --inference_stride 8
+```
+
+The policy outputs pose actions. At execution time, pose is converted through `BoundedPiperIK` and sent to ManiSkill as `pd_joint_pos`.
+
+## More Documentation
+
+Full workflow notes are in [docs/TRAINING_AND_DATA_USAGE.md](docs/TRAINING_AND_DATA_USAGE.md). Chinese usage notes are in [docs/USAGE.md](docs/USAGE.md).

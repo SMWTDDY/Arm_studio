@@ -1,0 +1,46 @@
+            # 1. 动作获取与聚合逻辑 (Weighted Temporal Aggregation)
+            if global_step_count % 8 == 0:
+                inf_start = time.time()
+                
+                obs_in = {}
+                if isinstance(obs, dict):
+                    if "state" in obs: obs_in["state"] = obs["state"][0]
+                    if "sensor_data" in obs:
+                        obs_in["sensor_data"] = {}
+                        for view_name, data in obs["sensor_data"].items():
+                            obs_in["sensor_data"][view_name] = {"rgb": data["rgb"][0]}
+                else:
+                    obs_in = obs
+
+                # 推理未来 32 步
+                res = policy.act(obs_in)
+                if res is not None:
+                    actions_seq = res.T # [32, 7]
+
+                    # 只有在推理成功后，才将其存入聚合缓存
+                    for i in range(32):
+                        t = global_step_count + i
+                        if t not in action_aggregation_buffer:
+                            action_aggregation_buffer[t] = []
+
+                        weight = np.exp(-0.05 * i) 
+                        action_aggregation_buffer[t].append((actions_seq[i], weight))
+
+                    total_inference_time += (time.time() - inf_start)
+                    inference_count += 1
+
+            # 2. 从缓存中提取当前步的加权平均动作 (必须在 if % 8 之外，每步都执行)
+            if global_step_count in action_aggregation_buffer:
+                preds_and_weights = action_aggregation_buffer[global_step_count]
+                
+                # 分离动作和权重
+                actions = np.array([pw[0] for pw in preds_and_weights])
+                weights = np.array([pw[1] for pw in preds_and_weights])
+                
+                # 执行加权平均
+                action = np.sum(actions * weights[:, np.newaxis], axis=0) / np.sum(weights)
+                
+                del action_aggregation_buffer[global_step_count] 
+            else:
+                if last_action is not None: action = last_action
+                else: action = np.zeros(7)

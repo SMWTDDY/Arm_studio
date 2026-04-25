@@ -27,7 +27,7 @@ class BinaryGripperWrapper(gym.ActionWrapper):
 @register_agent()
 class PiperArm(BaseAgent):
     uid = "piper_arm"
-    urdf_path = "models/piper/piper_assets/urdf/piper_description.urdf" 
+    urdf_path = "robot/piper/piper_assets/urdf/piper_description.urdf" 
     urdf_config = dict()
 
     @property

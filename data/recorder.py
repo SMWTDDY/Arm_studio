@@ -2,6 +2,12 @@ import h5py
 import numpy as np
 import os
 import time
+import copy
+
+try:
+    import torch
+except ImportError:
+    torch = None
 
 class HDF5Recorder:
     def __init__(self, robot="piper", mode="joint", save_dir="datasets"):
@@ -38,14 +44,33 @@ class HDF5Recorder:
         self.is_recording = True
         print(f"\n[Recorder] 开始录制新轨迹: {self.episode_name}")
 
+    def _to_numpy(self, x):
+        """将数据转换为 numpy 格式，并确保在 CPU 上"""
+        if x is None:
+            return None
+        
+        # 处理 PyTorch 张量
+        if torch is not None and isinstance(x, torch.Tensor):
+            return x.detach().cpu().numpy()
+        
+        # 递归处理字典
+        if isinstance(x, dict):
+            return {k: self._to_numpy(v) for k, v in x.items()}
+        
+        # 递归处理列表或元组
+        if isinstance(x, (list, tuple)):
+            return [self._to_numpy(v) for v in x]
+            
+        return x
+
     def add_step(self, obs, action, reward):
         if not self.is_recording:
             return
-        # 深度拷贝观察值，避免引用问题
-        import copy
-        self.obs_buffer.append(copy.deepcopy(obs))
-        self.action_buffer.append(action)
-        self.reward_buffer.append(reward)
+            
+        # 转换并存储数据 (转换为 numpy 以节省 GPU 显存并确保兼容性)
+        self.obs_buffer.append(copy.deepcopy(self._to_numpy(obs)))
+        self.action_buffer.append(copy.deepcopy(self._to_numpy(action)))
+        self.reward_buffer.append(copy.deepcopy(self._to_numpy(reward)))
         self.timestamp_buffer.append(time.time() - self.start_time)
         
     def save(self):
@@ -84,12 +109,14 @@ class HDF5Recorder:
     def _stack_obs(self, obs_list):
         if len(obs_list) == 0: return None
         first = obs_list[0]
+        
         if isinstance(first, dict):
             stacked = {}
             for k in first.keys():
                 stacked[k] = self._stack_obs([obs[k] for obs in obs_list])
             return stacked
         else:
+            # 此时应该是 numpy 数组或标量
             return np.array(obs_list)
 
     def _save_dict_to_hdf5(self, h5_group, d):

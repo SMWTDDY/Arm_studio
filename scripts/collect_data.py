@@ -8,12 +8,16 @@ import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import gymnasium as gym
-from models.piper.agent import PiperArm, PiperActionWrapper
+from robot.piper.agent import PiperArm, PiperActionWrapper
+from robot.piper.pose_ik import BoundedPiperIK
 from teleop.keyboard_ik import KeyboardTeleop
 from teleop.real_to_sim import RealToSimTeleop
 from data.recorder import HDF5Recorder
 import mani_skill.envs 
 import environments.conveyor_env # 导入自定义传送带环境
+
+import cv2
+import sapien
 
 def main():
     parser = argparse.ArgumentParser(description="ArmStudio Data Collection")
@@ -28,7 +32,8 @@ def main():
     args = parser.parse_args()
 
     # 1. 环境初始化
-    control_mode = "pd_ee_pose" if args.mode == "pose" else "pd_joint_pos"
+    use_pose_ik = args.mode == "pose" and args.teleop == "real"
+    control_mode = "pd_joint_pos" if use_pose_ik else ("pd_ee_pose" if args.mode == "pose" else "pd_joint_pos")
     
     env = gym.make(
         args.env_name, 
@@ -47,49 +52,95 @@ def main():
         teleop = KeyboardTeleop(env)
     else:
         teleop = RealToSimTeleop(can_name='can_master')
+        time.sleep(0.2)
 
     # 3. 记录器初始化
     recorder = HDF5Recorder(robot="piper", mode=args.mode)
+    pose_ik = BoundedPiperIK() if use_pose_ik else None
+    
+    # 显式初始化可视化窗口
+    cv2.namedWindow("Multi-View (Front | Hand)", cv2.WINDOW_AUTOSIZE)
 
     obs, _ = env.reset()
-    print("\n" + "="*50)
-    print(f"模式: {args.mode.upper()} | 遥操作: {args.teleop.upper()} | 夹爪: {'Binary' if args.binary_gripper else 'Continuous'}")
-    print("="*50)
-    print("控制指南:")
-    print("  [R] - 开始录制新轨迹")
-    print("  [S] - 停止并保存当前轨迹")
-    print("  [ESC] - 退出程序")
-    print("="*50 + "\n")
+
 
     try:
         while True:
             env.render()
+            
+            # --- 二视角显示逻辑 (正前 | 手眼) ---
+            if "sensor_data" in obs:
+                def to_numpy(x):
+                    if hasattr(x, "cpu"): return x.detach().cpu().numpy()
+                    return x
+
+                try:
+                    # 获取两个相机的画面
+                    front_img = to_numpy(obs["sensor_data"]["front_view"]["rgb"][0])
+                    hand_img = to_numpy(obs["sensor_data"]["hand_camera"]["rgb"][0])
+                    
+                    # 转换 RGB -> BGR
+                    front_bgr = cv2.cvtColor(front_img, cv2.COLOR_RGB2BGR)
+                    hand_bgr = cv2.cvtColor(hand_img, cv2.COLOR_RGB2BGR)
+                    
+                    # 拼接两个画面
+                    combined_img = np.hstack([front_bgr, hand_bgr])
+                    
+                    # 整体缩放
+                    combined_img = cv2.resize(combined_img, (0, 0), fx=1.2, fy=1.2)
+                    
+                    cv2.imshow("Multi-View (Front | Hand)", combined_img)
+                    cv2.waitKey(1)
+                except Exception as e:
+                    print(f"[Display Error] {e}")
+            # ----------------------
+
             window = env.unwrapped.viewer.window if env.unwrapped.viewer else None
 
             if window:
                 if window.key_press('r'):
-                    if not recorder.is_recording: recorder.start_episode()
+                    if not recorder.is_recording: 
+                        recorder.start_episode()
+                        print("开始录制轨迹。操作指南：使用遥操作控制机械臂，按 'e' 保存轨迹，按 'q' 抛弃轨迹，按 'escape' 退出")
                 
-                if window.key_press('s'):
-                    if recorder.is_recording: recorder.save()
+                if window.key_press('e'):
+                    if recorder.is_recording: 
+                        recorder.save()
+                
+                if window.key_press('q'):
+                    if recorder.is_recording:
+                        recorder.is_recording = False
+                        recorder.reset_buffers()
+                        print("轨迹已抛弃")
 
                 if window.key_down('escape'):
                     if recorder.is_recording: recorder.save()
                     break
 
             # 1. 获取遥操作指令
-            # 对齐用户选择的 mode：
-            # 如果是 pose 模式，get_action 会调用 get_pose 计算坐标发给 pd_ee_pose
-            # 如果是 joint 模式，get_action 会直接发角度给 pd_joint_pos
-            action = teleop.get_action(mode=args.mode, use_binary_gripper=args.binary_gripper)
+            if use_pose_ik:
+                record_action = teleop.get_action(mode="pose", use_binary_gripper=args.binary_gripper)
+                seed_action = teleop.get_action(mode="joint", use_binary_gripper=args.binary_gripper)
+                ik_result = pose_ik.solve(record_action, seed_action[:6])
+                sim_action = np.concatenate([ik_result["qpos"], [record_action[6]]]).astype(np.float32)
+                if ik_result["pos_error"] > 0.01 or ik_result["rot_error"] > 0.1:
+                    print(
+                        f"[PoseIK Warning] pos={ik_result['pos_error']:.4f}m "
+                        f"rot={ik_result['rot_error']:.4f}rad status={ik_result['status']}"
+                    )
+            else:
+                sim_action = teleop.get_action(
+                    mode=args.mode,
+                    use_binary_gripper=args.binary_gripper,
+                )
+                record_action = sim_action
 
             # 2. 执行物理步进
-            next_obs, reward, terminated, truncated, info = env.step(action)
-
+            next_obs, reward, terminated, truncated, info = env.step(sim_action)
 
             # 3. 录制数据
             if recorder.is_recording:
-                recorder.add_step(obs, action, reward)
+                recorder.add_step(obs, record_action, reward)
 
             obs = next_obs
 

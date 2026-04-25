@@ -1,0 +1,10 @@
+torch>=2.0.0
+torchvision
+h5py
+diffusers
+accelerate
+numpy
+scipy
+tqdm
+matplotlib
+opencv-python

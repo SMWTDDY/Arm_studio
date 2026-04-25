@@ -1,0 +1,24 @@
+.devcontainer/
+
+# Python/runtime cache
+__pycache__/
+*.py[cod]
+
+# Local tool state
+.codex
+.codex/
+
+# Generated datasets and artifacts
+datasets/**/*.hdf5
+lerobot_dataset/
+outputs/
+checkpoints_vision/
+*.pth
+*.pt
+*.ckpt
+
+# Legacy debug output locations
+debug_vision.jpg
+sapien_screenshot_*.png
+test_frames/
+viewenv_frames/

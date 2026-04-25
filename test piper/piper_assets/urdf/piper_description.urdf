@@ -32,13 +32,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/base_link.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -49,6 +46,9 @@
         <mesh
           filename="../meshes/base_link.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
   
@@ -73,13 +73,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link1.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -90,6 +87,9 @@
         <mesh
           filename="../meshes/link1.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
   <joint
@@ -131,13 +131,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link2.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -148,6 +145,9 @@
         <mesh
           filename="../meshes/link2.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
   <joint
@@ -190,13 +190,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link3.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -207,6 +204,9 @@
         <mesh
           filename="../meshes/link3.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
   <joint
@@ -249,13 +249,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link4.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -266,6 +263,9 @@
         <mesh
           filename="../meshes/link4.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
   <joint
@@ -307,13 +307,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link5.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -324,6 +321,9 @@
         <mesh
           filename="../meshes/link5.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
   <joint
@@ -365,13 +365,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link6.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -382,6 +379,9 @@
         <mesh
           filename="../meshes/link6.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
   <joint
@@ -423,13 +423,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/gripper_base.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -440,6 +437,9 @@
         <mesh
           filename="../meshes/gripper_base.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link> 
   <joint
@@ -474,13 +474,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link7.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -491,6 +488,9 @@
         <mesh
           filename="../meshes/link7.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
 
@@ -523,13 +523,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/link8.STL" />
+        <box size="0.05 0.05 0.05"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      <material name="red">
+        <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
@@ -540,6 +537,9 @@
         <mesh
           filename="../meshes/link8.STL" />
       </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
     </collision>
   </link>
 

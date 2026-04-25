@@ -23,6 +23,8 @@ print_usage() {
     echo "  -p, --port PORT      远程服务器端口 (默认: 5000)"
     echo "  -s, --server         启动推理服务器模式"
     echo "  -h, --help           显示帮助信息"
+    echo "  -model, --model MODEL_PATH   模型权重保存地址（远程推理情况下应填写远程服务器文件权重）"
+    echo "  -e, --env ENV_NAME           ManiSkill 环境名称 (默认: Empty-v1)"
     echo ""
     echo "示例:"
     echo "  $0                          # 默认本地推理模式"
@@ -34,9 +36,11 @@ print_usage() {
 
 # 默认参数
 MODE="local"
-SERVER_ADDR="localhost"
-SERVER_PORT="5000"
+SERVER_ADDR="192.168.0.197"
+SERVER_PORT="5555"
 START_SERVER=false
+MODEL_PATH="outputs/checkpoints/vision/final_vision_policy.pth"
+ENV_NAME="Empty-v1"
 
 # 解析命令行参数
 while [[ $# -gt 0 ]]; do
@@ -57,9 +61,17 @@ while [[ $# -gt 0 ]]; do
             START_SERVER=true
             shift
             ;;
+        -e|--env)
+            ENV_NAME="$2"
+            shift 2
+            ;;
         -h|--help)
             print_usage
             exit 0
+            ;;
+        -model|--model)
+            MODEL_PATH="$2"
+            shift 2
             ;;
         *)
             echo -e "${RED}错误: 未知参数 '$1'${NC}"
@@ -115,6 +127,8 @@ echo ""
 export ARM_STUDIO_MODE=$MODE
 export ARM_STUDIO_SERVER_ADDR=$SERVER_ADDR
 export ARM_STUDIO_SERVER_PORT=$SERVER_PORT
+export ARM_STUDIO_MODEL_PATH=$MODEL_PATH
+export ARM_STUDIO_ENV=$ENV_NAME
 
 # 检查 Python 环境
 if ! command -v python &> /dev/null; then
@@ -127,9 +141,9 @@ echo "启动推理..."
 echo ""
 
 if [[ "$MODE" == "remote" ]]; then
-    python scripts/run_inference.py --mode remote --addr $SERVER_ADDR --port $SERVER_PORT
+    python scripts/run_inference.py --mode remote --addr $SERVER_ADDR --port $SERVER_PORT --env $ENV_NAME
 else
-    python scripts/run_inference.py --mode local
+    python scripts/run_inference.py --mode local --model $MODEL_PATH --env $ENV_NAME
 fi
 
 # 检查退出状态

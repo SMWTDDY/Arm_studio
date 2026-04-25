@@ -64,7 +64,7 @@ class InferenceClient:
 
 if __name__ == "__main__":
     # 简单的测试逻辑
-    client = InferenceClient(host="172.16.206.101", port=5555)
+    client = InferenceClient(host="localhost", port=5555)
     # 关键修复：发送 16 维观测数据以匹配服务器
     dummy_obs = np.zeros(16, dtype=np.float32)
     print("发送测试请求...")
