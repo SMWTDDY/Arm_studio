@@ -67,6 +67,7 @@ def main():
     frame_count = 0
     save_interval = 30  # 每30帧保存一次图像
     total_frame_count = 0
+    start_time = time.time()
 
     try:
         while True:
@@ -130,6 +131,7 @@ def main():
                     if frame_count % save_interval == 0:
                         frame_file = os.path.join(output_dir, f"frame_{total_frame_count:06d}.jpg")
                         cv2.imwrite(frame_file, combined_img)
+                        t = time.time() - start_time
                         joint_status = f"Joints: {action[:3]} | t={t:.1f}"
                         print(f"\r[ViewEnv] 已保存: {os.path.basename(frame_file)} | {joint_status}", end="", flush=True)
                         

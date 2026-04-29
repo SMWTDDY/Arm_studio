@@ -1,0 +1,8 @@
+-r requirements-base.txt
+torch
+torchvision
+diffusers
+accelerate
+zarr
+pyzmq
+

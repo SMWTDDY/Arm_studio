@@ -1,0 +1,2984 @@
+{
+  "scene": "desktop_v1",
+  "started_at": "2026-04-28T19:00:37",
+  "backend": "v4l2",
+  "width": 640,
+  "height": 480,
+  "fps": 30,
+  "num_frames_requested": 2000,
+  "interval_seconds": 0.5,
+  "serials": [
+    "CH27152011E"
+  ],
+  "role_by_serial": {
+    "CH27152011E": "base_camera"
+  },
+  "devices": [
+    {
+      "video": "/dev/video0",
+      "name": "Orbbec DaBai DCW RGB Camera: Or",
+      "usb": "1-6.3",
+      "id": "2bc5:0559",
+      "product": "Orbbec DaBai DCW RGB Camera",
+      "manufacturer": "Sonix Technology Co., Ltd.",
+      "serial": "CH27152011E"
+    },
+    {
+      "video": "/dev/video1",
+      "name": "Orbbec DaBai DCW RGB Camera: Or",
+      "usb": "1-6.3",
+      "id": "2bc5:0559",
+      "product": "Orbbec DaBai DCW RGB Camera",
+      "manufacturer": "Sonix Technology Co., Ltd.",
+      "serial": "CH27152011E"
+    },
+    {
+      "video": "/dev/video2",
+      "name": "Orbbec DaBai DCW RGB Camera: Or",
+      "usb": "1-2.4.3",
+      "id": "2bc5:0559",
+      "product": "Orbbec DaBai DCW RGB Camera",
+      "manufacturer": "Sonix Technology Co., Ltd.",
+      "serial": "CH2592100GJ"
+    },
+    {
+      "video": "/dev/video3",
+      "name": "Orbbec DaBai DCW RGB Camera: Or",
+      "usb": "1-2.4.3",
+      "id": "2bc5:0559",
+      "product": "Orbbec DaBai DCW RGB Camera",
+      "manufacturer": "Sonix Technology Co., Ltd.",
+      "serial": "CH2592100GJ"
+    },
+    {
+      "video": "/dev/video4",
+      "name": "Orbbec DaBai DCW RGB Camera: Or",
+      "usb": "1-3.4.3",
+      "id": "2bc5:0559",
+      "product": "Orbbec DaBai DCW RGB Camera",
+      "manufacturer": "Sonix Technology Co., Ltd.",
+      "serial": "CH28822007C"
+    },
+    {
+      "video": "/dev/video5",
+      "name": "Orbbec DaBai DCW RGB Camera: Or",
+      "usb": "1-3.4.3",
+      "id": "2bc5:0559",
+      "product": "Orbbec DaBai DCW RGB Camera",
+      "manufacturer": "Sonix Technology Co., Ltd.",
+      "serial": "CH28822007C"
+    }
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00000_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:41.818",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 1,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00001_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:42.317",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 2,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00002_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:42.818",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 3,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00003_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:43.317",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00004_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:43.817",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00005_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:44.315",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00006_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:44.817",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 7,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00007_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:45.318",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00008_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:45.818",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00009_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:46.318",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00010_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:46.818",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 11,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00011_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:47.318",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 12,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00012_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:47.819",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 13,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00013_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:48.319",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 14,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00014_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:48.819",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 15,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00015_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:49.319",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 16,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00016_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:49.819",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 17,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00017_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:50.318",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 18,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00018_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:50.817",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 19,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00019_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:51.319",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 20,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00020_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:51.817",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 21,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00021_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:52.320",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 22,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00022_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:52.820",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 23,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00023_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:53.320",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 24,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00024_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:53.820",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 25,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00025_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:54.320",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 26,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00026_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:54.820",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 27,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00027_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:55.320",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 28,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00028_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:55.820",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 29,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00029_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:56.317",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 30,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00030_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:56.821",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 31,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00031_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:57.320",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 32,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00032_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:57.821",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 33,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00033_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:58.321",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 34,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00034_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:58.821",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 35,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00035_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:59.321",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 36,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00036_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:00:59.823",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 37,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00037_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:00.323",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 38,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00038_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:00.822",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 39,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00039_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:01.322",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 40,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00040_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:01.823",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 41,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00041_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:02.323",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 42,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00042_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:02.822",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 43,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00043_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:03.322",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 44,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00044_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:03.822",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 45,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00045_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:04.320",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 46,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00046_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:04.822",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 47,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00047_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:05.322",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 48,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00048_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:05.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 49,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00049_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:06.322",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 50,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00050_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:06.823",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 51,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00051_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:07.323",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 52,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00052_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:07.823",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 53,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00053_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:08.323",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 54,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00054_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:08.823",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 55,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00055_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:09.323",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 56,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00056_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:09.823",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 57,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00057_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:10.323",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 58,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00058_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:10.824",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 59,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00059_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:11.324",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 60,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00060_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:11.824",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 61,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00061_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:12.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 62,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00062_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:12.826",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 63,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00063_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:13.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 64,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00064_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:13.824",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 65,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00065_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:14.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 66,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00066_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:14.825",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 67,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00067_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:15.324",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 68,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00068_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:15.827",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 69,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00069_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:16.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 70,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00070_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:16.825",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 71,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00071_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:17.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 72,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00072_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:17.826",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 73,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00073_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:18.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 74,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00074_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:18.825",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 75,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00075_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:19.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 76,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00076_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:19.827",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 77,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00077_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:20.326",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 78,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00078_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:20.826",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 79,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00079_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:21.326",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 80,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00080_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:21.826",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 81,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00081_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:22.328",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 82,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00082_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:22.828",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 83,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00083_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:23.325",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 84,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00084_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:23.827",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 85,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00085_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:24.328",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 86,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00086_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:24.828",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 87,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00087_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:25.327",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 88,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00088_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:25.827",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 89,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00089_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:26.327",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 90,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00090_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:26.837",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 91,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00091_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:27.327",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 92,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00092_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:27.828",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 93,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00093_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:28.328",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 94,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00094_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:28.828",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 95,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00095_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:29.328",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 96,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00096_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:29.828",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 97,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00097_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:30.328",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 98,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00098_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:30.828",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 99,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00099_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:31.326",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 100,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00100_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:31.831",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 101,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00101_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:32.329",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 102,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00102_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:32.828",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 103,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00103_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:33.329",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 104,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00104_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:33.829",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 105,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00105_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:34.329",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 106,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00106_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:34.829",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 107,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00107_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:35.329",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 108,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00108_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:35.830",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 109,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00109_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:36.330",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 110,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00110_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:36.840",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 111,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00111_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:37.332",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 112,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00112_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:37.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 113,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00113_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:38.332",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 114,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00114_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:38.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 115,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00115_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:39.330",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 116,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00116_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:39.831",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 117,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00117_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:40.331",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 118,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00118_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:40.831",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 119,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00119_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:41.331",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 120,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00120_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:41.831",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 121,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00121_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:42.329",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 122,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00122_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:42.833",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 123,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00123_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:43.332",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 124,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00124_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:43.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 125,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00125_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:44.334",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 126,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00126_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:44.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 127,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00127_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:45.332",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 128,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00128_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:45.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 129,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00129_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:46.332",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 130,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00130_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:46.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 131,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00131_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:47.332",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 132,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00132_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:47.832",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 133,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00133_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:48.333",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 134,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00134_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:48.833",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 135,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00135_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:49.333",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 136,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00136_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:49.833",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 137,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00137_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:50.333",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 138,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00138_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:50.833",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 139,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00139_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:51.333",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 140,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00140_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:51.834",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 141,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00141_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:52.334",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 142,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00142_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:52.834",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 143,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00143_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:53.336",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 144,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00144_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:53.834",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 145,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00145_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:54.335",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 146,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00146_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:54.834",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 147,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00147_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:55.334",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 148,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00148_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:55.834",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 149,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00149_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:56.336",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 150,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00150_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:56.837",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 151,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00151_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:57.335",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 152,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00152_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:57.835",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 153,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00153_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:58.335",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 154,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00154_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:58.835",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 155,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00155_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:59.335",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 156,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00156_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:01:59.835",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 157,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00157_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:00.335",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 158,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00158_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:00.835",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 159,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00159_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:01.335",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 160,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00160_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:01.835",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 161,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00161_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:02.335",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 162,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00162_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:02.836",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 163,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00163_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:03.336",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 164,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00164_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:03.836",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 165,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00165_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:04.336",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 166,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00166_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:04.836",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 167,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00167_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:05.336",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 168,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00168_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:05.839",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 169,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00169_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:06.337",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 170,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00170_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:06.837",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 171,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00171_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:07.337",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 172,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00172_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:07.837",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 173,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00173_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:08.339",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 174,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00174_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:08.838",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 175,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00175_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:09.339",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 176,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00176_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:09.838",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 177,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00177_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:10.340",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 178,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00178_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:10.848",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 179,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00179_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:11.336",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 180,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00180_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:11.839",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 181,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00181_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:12.341",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 182,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00182_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:12.841",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 183,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00183_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:13.339",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 184,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00184_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:13.839",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 185,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00185_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:14.341",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 186,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00186_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:14.841",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 187,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00187_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:15.341",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 188,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00188_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:15.842",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 189,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00189_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:16.340",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 190,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00190_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:16.842",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 191,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00191_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:17.340",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 192,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00192_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:17.842",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 193,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00193_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:18.342",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 194,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00194_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:18.840",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 195,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00195_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:19.341",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 196,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00196_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:19.841",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 197,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00197_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:20.341",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 198,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00198_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:20.841",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 199,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00199_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:21.341",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 200,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00200_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:21.841",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 201,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00201_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:22.344",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 202,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00202_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:22.843",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 203,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00203_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:23.343",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 204,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00204_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:23.843",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 205,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00205_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:24.343",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 206,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00206_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:24.842",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 207,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00207_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:25.342",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 208,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00208_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:25.842",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 209,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00209_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:26.342",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 210,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00210_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:26.845",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 211,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00211_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:27.344",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 212,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00212_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:27.843",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 213,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00213_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:28.343",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 214,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00214_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:28.843",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 215,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00215_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:29.343",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 216,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00216_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:29.843",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 217,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00217_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:30.343",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 218,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00218_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:30.844",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 219,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00219_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:31.344",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 220,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00220_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:31.844",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 221,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00221_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:32.353",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 222,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00222_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:32.846",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 223,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00223_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:33.344",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 224,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00224_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:33.844",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 225,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00225_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:34.344",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 226,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00226_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:34.843",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 227,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00227_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:35.344",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 228,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00228_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:35.844",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 229,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00229_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:36.345",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 230,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00230_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:36.845",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 231,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00231_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:37.347",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 232,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00232_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:37.843",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 233,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00233_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:38.345",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 234,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00234_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:38.845",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 235,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00235_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:39.345",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 236,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00236_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:39.845",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 237,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00237_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:40.345",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 238,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00238_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:40.847",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 239,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00239_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:41.347",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 240,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00240_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:41.849",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "index": 241,
+      "serial": "CH27152011E",
+      "role": "base_camera",
+      "relative_path": "background/source_images/base_camera/00241_CH27152011E.jpg",
+      "timestamp": "2026-04-28T19:02:42.346",
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    }
+  ],
+  "notes": [
+    "Images are RGB camera captures saved as jpg files.",
+    "V4L2 backend records RGB only for the current DaBai DCW setup.",
+    "Use depth/sdk capture later for point-cloud alignment after SDK depth is stable."
+  ],
+  "finished_at": "2026-04-28T19:02:42"
+}

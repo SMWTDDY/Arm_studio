@@ -17,7 +17,7 @@ from teleop.get_pose import get_pose
 
 
 DEFAULT_URDF = os.path.join(
-    PROJECT_ROOT, "robot/piper/piper_assets/urdf/piper_description.urdf"
+    PROJECT_ROOT, "robot/piper/piper_assets/urdf/piper_description_with_camera_right.urdf"
 )
 
 

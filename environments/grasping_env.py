@@ -27,10 +27,10 @@ class BinaryGripperWrapper(gym.ActionWrapper):
 
     def action(self, action):
         # 拦截 7 维输入，二值化第 7 位
-        gripper_val = 1.0 if action[6] > self.threshold else -1.0
+        gripper_val = 0.035 if action[6] > self.threshold else 0.0
         
-        # 扩维成 8 维。因为 URDF 中 joint8 已旋转 180 度，输入相同的正值即可实现相向闭合
-        real_action = np.append(action[:6], [gripper_val, gripper_val])
+        # Piper 的两个夹爪关节限位相反：joint7 为正，joint8 为负。
+        real_action = np.append(action[:6], [gripper_val, -gripper_val])
         return real_action
 
 # ==========================================
@@ -40,7 +40,7 @@ class BinaryGripperWrapper(gym.ActionWrapper):
 class PiperArm(BaseAgent):
     uid = "piper_arm"
     # 确保此处相对路径与你本地一致
-    urdf_path = "piper_assets/urdf/piper_description.urdf" 
+    urdf_path = "robot/piper/piper_assets/urdf/piper_description_with_camera.urdf"
     urdf_config = dict()
 
     @property
@@ -59,12 +59,12 @@ class PiperArm(BaseAgent):
         )
         
         gripper_joint_names = ["joint7", "joint8"]
-        # 恢复统一的正向标量限位
         gripper_pd = PDJointPosControllerConfig(
             joint_names=gripper_joint_names,
-            lower=0.0, upper=0.035, 
+            lower=np.array([0.0, -0.035], dtype=np.float32),
+            upper=np.array([0.035, 0.0], dtype=np.float32),
             stiffness=500, damping=50,
-            normalize_action=True,
+            normalize_action=False,
             drive_mode="force"
         )
         

@@ -1,0 +1,9 @@
+numpy
+scipy
+h5py
+tqdm
+matplotlib
+opencv-python
+pyyaml
+pynput
+

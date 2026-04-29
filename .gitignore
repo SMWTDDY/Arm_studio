@@ -22,3 +22,8 @@ debug_vision.jpg
 sapien_screenshot_*.png
 test_frames/
 viewenv_frames/
+
+# Third-party SDK build artifacts
+third_party/*/build/
+third_party/*/dist/
+third_party/**/*.egg-info/

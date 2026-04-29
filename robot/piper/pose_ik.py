@@ -8,7 +8,7 @@ from teleop.get_pose import get_pose
 
 
 DEFAULT_URDF = os.path.join(
-    os.path.dirname(__file__), "piper_assets/urdf/piper_description.urdf"
+    os.path.dirname(__file__), "piper_assets/urdf/piper_description_with_camera_right.urdf"
 )
 
 

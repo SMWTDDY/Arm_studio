@@ -1,175 +1,141 @@
 # Arm Studio
 
-Arm Studio is a Piper robotic arm workspace for ManiSkill simulation, real-to-sim teleoperation, dataset collection, pose-action standardization, and vision diffusion policy training.
+`Arm_studio` 是当前项目根目录，用于 Piper 机械臂的真实遥操、ManiSkill/SAPIEN 仿真控制、数据采集、回放、训练和推理。原 `Piper_test` 的代码能力已经融合到本仓库，后续运行与开发不再依赖外层 `Piper_test/` 目录。
 
-The recommended control/data path is:
+当前推荐主链路：
 
 ```text
-record pose action -> train pose policy -> decode xyz + rot6d -> pose action -> BoundedPiperIK -> pd_joint_pos
+统一 config
+  -> make_unified_piper_env()
+  -> real/sim + single/dual 环境
+  -> 统一 obs/action 协议
+  -> H5/LeRobot 数据
+  -> diffusion / VLA-style 策略训练
+  -> 真实或仿真部署
 ```
 
-Actions stored for training use:
+训练侧当前主要使用 pose action：
 
 ```text
 action = [x, y, z, roll, pitch, yaw, gripper]
 ```
 
-During training, pose rotation is encoded as 6D rotation and gripper is trained as a binary classifier:
+训练时位姿旋转会转成 6D rotation，夹爪作为二分类标签：
 
 ```text
 continuous_action = [x, y, z, rotation_6d]
 gripper_label = 0/1
 ```
 
-## Environment
+## 文档入口
 
-Use the existing conda environment if available:
-
-```bash
-conda activate SL
-```
-
-Install Python dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-For training-only machines, this smaller list is also available:
-
-```bash
-pip install -r training/Diffusion_Training/requirements.txt
-```
-
-Before training, confirm CUDA is visible:
-
-```bash
-nvidia-smi
-
-/home/lebinge/miniforge3/envs/SL/bin/python - <<'PY'
-import torch
-print(torch.cuda.is_available())
-print(torch.cuda.device_count())
-if torch.cuda.is_available():
-    print(torch.cuda.get_device_name(0))
-PY
-```
-
-The training script will run on CPU if CUDA is not available, but it will be very slow.
-
-## Repository Layout
+项目文档已经统一收敛到：
 
 ```text
-robot/                         Piper agent, action wrapper, bounded IK
-environments/                  ManiSkill custom environments
-teleop/                        Real arm and keyboard teleoperation
-data/                          Data collection and dataset viewers
-scripts/                       User-facing commands and utilities
-scripts/data_tools/            Dataset conversion, validation, cache, video export
-models/DiffusionPolicy/        Vision diffusion policy model and inference policy
-training/Diffusion_Training/   Training script and training_config.py
-inference/                     Local/remote inference helpers
-docs/                          Usage notes and repository documentation
-outputs/                       Checkpoints, debug images, exported videos
-datasets/                      Local HDF5 datasets and generated caches
+docs/
 ```
 
-More detail is in [docs/REPO_STRUCTURE.md](docs/REPO_STRUCTURE.md). Chinese day-to-day usage notes are in [docs/USAGE.md](docs/USAGE.md).
+建议先读：
 
-## Data Preparation
+```text
+docs/文档索引.md
+docs/05_毕设规划/代码掌控地图.md
+docs/05_毕设规划/毕设完成路线图.md
+docs/01_项目总览/合并状态说明.md
+docs/01_项目总览/目录约定.md
+docs/02_Piper统一环境/统一协议.md
+```
 
-Build one unified pose dataset from mixed joint and pose recordings:
+## 目录概览
+
+```text
+agent_infra/                    Piper 真实/仿真环境、相机、录制、回放
+agent_factory/                  训练 agent、数据集、环境 factory、runner
+scripts/                        唯一脚本根：Piper、仿真、数据、诊断、训练工具
+robot/                          Piper 仿真 agent、动作 wrapper、IK
+environments/                   ManiSkill 自定义环境
+teleop/                         真实机械臂和键盘遥操
+data/                           旧数据采集和数据查看工具，新数据不要写这里
+third_party/                    可选外部 SDK 源码快照，如 pyorbbecsdk
+models/DiffusionPolicy/         diffusion policy 模型与推理 policy
+training/Diffusion_Training/    diffusion 训练脚本和训练配置
+inference/                      本地/远程推理辅助
+docs/                           中文文档中心
+outputs/                        checkpoint、debug 图、导出视频
+datasets/                       本地 HDF5/LeRobot 数据和训练缓存
+```
+
+## 快速检查
+
+不连接硬件时，可以先检查统一配置是否能被正确读取：
 
 ```bash
-/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/build_unified_pose_dataset.py \
-  "datasets/*.hdf5" \
-  "datasets/auto_collected_real/*.hdf5" \
-  --output-dir datasets/unified_pose_all \
-  --prefix piper_pose_unified
+PYTHONPATH=. python3 scripts/piper/test_unified_env.py \
+  -cfg agent_infra/Piper_Env/Config/unified_real_dual.yaml \
+  --dry-config
+
+PYTHONPATH=. python3 scripts/piper/test_unified_env.py \
+  -cfg agent_infra/Piper_Env/Config/unified_sim_dual.yaml \
+  --dry-config
 ```
 
-Build a resized image cache for faster vision training:
+统一配置 dry-run 工具也支持检查：
 
 ```bash
-MPLCONFIGDIR=/tmp/matplotlib \
-/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/build_training_image_cache.py \
-  datasets/unified_pose_all \
-  --output-dir datasets/unified_pose_all_128 \
-  --image-size 128 \
-  --compression lzf
+PYTHONPATH=. python3 scripts/piper/collect_unified.py \
+  -cfg agent_infra/Piper_Env/Config/unified_real_dual.yaml \
+  --dry-config
 ```
 
-Validate pose replay quality:
+Piper 真实/仿真采集默认写入 `datasets/piper`；训练和推理输出默认写入
+`outputs/`。例如仿真采集：
 
 ```bash
-/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/validate_pose_dataset.py \
-  "datasets/unified_pose_all/*.hdf5"
+bash scripts/piper/sim/collect_h5.sh --arm-mode single --no-preview
 ```
 
-Export a few HDF5 videos for camera checks:
+真实硬件只读诊断入口：
 
 ```bash
-/home/lebinge/miniforge3/envs/SL/bin/python scripts/data_tools/export_hdf5_videos.py \
-  "datasets/unified_pose_all/*.hdf5" \
-  --output-dir outputs/dataset_videos/pose_camera_samples \
-  --fps 30 \
-  --max-frames 300
+PYTHONPATH=. python3 scripts/piper/diagnose_real_setup.py --no-video-read
 ```
 
-## Training
+旧 Arm_studio HDF5 转统一 raw H5：
 
-Main configuration lives in:
+```bash
+PYTHONPATH=. python3 scripts/data_tools/convert_legacy_armstudio_h5.py \
+  training/Diffusion_Training/data/*.hdf5 \
+  --output-dir datasets/converted_unified_h5
+```
+
+## 训练入口
+
+主要训练配置：
 
 ```text
 training/Diffusion_Training/training_config.py
 ```
 
-Start training from the cached dataset:
+训练命令示例：
 
 ```bash
 MPLCONFIGDIR=/tmp/matplotlib \
-/home/lebinge/miniforge3/envs/SL/bin/python training/Diffusion_Training/train_diffusion_vision.py \
+python training/Diffusion_Training/train_diffusion_vision.py \
   --data-dir datasets/unified_pose_all_128 \
   --total-steps 100000 \
   --save-every 5000 \
   --num-workers 2
 ```
 
-Checkpoints and the loss plot are written to:
+## 当前开发原则
+
+新的开发只进入 `Arm_studio`。`Piper_test` 已由用户在别处备份，本仓库不再把它作为运行来源；后续新增功能应优先走统一入口、统一 config 和统一数据协议，避免真实、仿真、训练三套链路继续分裂。`3DGS` 暂时仍作为外层兄弟目录保留，等进入 RoboSimGS/3DGS 阶段再纳入根目录规划。
+
+依赖安装按用途拆分：
 
 ```text
-outputs/checkpoints/vision/
+requirements-base.txt
+requirements-hardware.txt
+requirements-sim.txt
+requirements-train.txt
 ```
-
-Resume training:
-
-```bash
-MPLCONFIGDIR=/tmp/matplotlib \
-/home/lebinge/miniforge3/envs/SL/bin/python training/Diffusion_Training/train_diffusion_vision.py \
-  --data-dir datasets/unified_pose_all_128 \
-  --resume outputs/checkpoints/vision/checkpoint_5000.pth \
-  --total-steps 100000 \
-  --save-every 5000 \
-  --num-workers 2
-```
-
-## Inference
-
-Run local inference with the trained checkpoint:
-
-```bash
-/home/lebinge/miniforge3/envs/SL/bin/python scripts/run_inference.py \
-  --mode local \
-  --model outputs/checkpoints/vision/final_vision_policy.pth \
-  --env environments/conveyor_env.py \
-  --ctrl_mode pose \
-  --binary_gripper \
-  --target_fps 60 \
-  --inference_stride 8
-```
-
-The policy outputs pose actions. At execution time, pose is converted through `BoundedPiperIK` and sent to ManiSkill as `pd_joint_pos`.
-
-## More Documentation
-
-Full workflow notes are in [docs/TRAINING_AND_DATA_USAGE.md](docs/TRAINING_AND_DATA_USAGE.md). Chinese usage notes are in [docs/USAGE.md](docs/USAGE.md).

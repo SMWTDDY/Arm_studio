@@ -1,9 +1,16 @@
 import numpy as np
 import time
 import threading
-from pyAgxArm import create_agx_arm_config, AgxArmFactory
 import os
 import sys
+
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_LOCAL_PYAGXARM_ROOT = os.path.join(_PROJECT_ROOT, "pyAgxArm")
+if os.path.exists(os.path.join(_LOCAL_PYAGXARM_ROOT, "pyAgxArm", "__init__.py")):
+    sys.path.insert(0, _LOCAL_PYAGXARM_ROOT)
+
+from pyAgxArm import create_agx_arm_config, AgxArmFactory
+
 sys.path.append(os.path.dirname(__file__))  # 添加当前目录到路径，以便导
 from get_pose import get_pose
 
@@ -12,9 +19,20 @@ class RealToSimTeleop:
     将真实 Piper 机械臂的关节空间或位姿数据同步到仿真环境中。
     兼容 Api_test 的控制逻辑。
     """
-    def __init__(self, can_name='can_master', gripper_threshold=0.015):
+    def __init__(
+        self,
+        can_name='can_master',
+        gripper_threshold=0.015,
+        robot_model='piper',
+        firmware_version='default',
+    ):
         # 1. 初始化 pyAgxArm 配置
-        self.cfg = create_agx_arm_config(robot="piper", comm="can", channel=can_name)
+        self.cfg = create_agx_arm_config(
+            robot=robot_model,
+            comm="can",
+            channel=can_name,
+            firmeware_version=firmware_version,
+        )
         self.robot = AgxArmFactory.create_arm(self.cfg)
         
         # 2. 连接并激活机械臂
@@ -76,7 +94,11 @@ class RealToSimTeleop:
                     self._latest_pose[:6] = pose
                 
                 if gripper_data is not None:
-                    width = gripper_data.msg.width
+                    width = getattr(
+                        gripper_data.msg,
+                        "value",
+                        getattr(gripper_data.msg, "width", 0.0),
+                    )
                     self._latest_gripper_width = float(np.clip(width, 0.0, 0.035))
                     # 映射夹爪宽度到二进制 (-1 or 1) 供某些控制器使用
                     self._latest_joints[6] = 1.0 if width > self.gripper_threshold else -1.0

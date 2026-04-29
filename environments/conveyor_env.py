@@ -114,9 +114,9 @@ class PiperConveyorEnv(BaseEnv):
             return
             
         try:
-            # 获取link6 (法兰)
-            link6 = self.agent.robot.find_link_by_name("link6")
-            link6_pose = link6.pose
+            # hand_camera now follows the URDF hand_cam optical mount.
+            hand_cam = self.agent.robot.find_link_by_name("hand_cam")
+            camera_world_pose = hand_cam.pose
             
             # 获取 hand_camera 的实际世界坐标位姿
             sensor_configs = getattr(self.agent, '_sensor_configs', [])
@@ -127,9 +127,7 @@ class PiperConveyorEnv(BaseEnv):
                     break
 
             if hand_camera_config is not None and getattr(hand_camera_config, 'mount', None) is not None:
-                camera_world_pose = link6_pose * hand_camera_config.pose
-            else:
-                camera_world_pose = link6_pose
+                camera_world_pose = camera_world_pose * hand_camera_config.pose
             
         except Exception as e:
             # 如果出错，打印错误但不隐藏标记

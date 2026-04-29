@@ -13,7 +13,7 @@ def view_frames(frame_dir="outputs/frames/viewenv", display_count=10):
     
     if not frame_dir.exists():
         print(f"❌ 目录不存在: {frame_dir}")
-        print("请先运行: python scripts/viewenv.py")
+        print("请先运行: python scripts/diagnostics/viewenv.py")
         return
     
     frames = sorted(frame_dir.glob("frame_*.jpg"))

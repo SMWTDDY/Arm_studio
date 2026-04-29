@@ -32,6 +32,6 @@ def h5_to_video(h5_path, output_path, fps=30):
         print(f"转换完成！视频保存于: {output_path}")
 
 if __name__ == "__main__":
-    h5_path = 'datasets/piper_joint_recording_000.hdf5'
+    h5_path = 'datasets/piper_joint_sim_000.hdf5'
     video_path = 'datasets/video/trajectory_check.mp4'
     h5_to_video(h5_path, video_path)

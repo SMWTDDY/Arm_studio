@@ -1,0 +1,1223 @@
+{
+  "scene_root": "/home/lebinge/Desktop/wry/Arm_studio/assets/realsim/desktop_v1",
+  "source_root": "/home/lebinge/Desktop/wry/Arm_studio/assets/realsim/desktop_v1/background/source_images",
+  "output_dir": "/home/lebinge/Desktop/wry/Arm_studio/assets/realsim/desktop_v1/background/nerfstudio_input/images",
+  "roles": [
+    "base_camera"
+  ],
+  "stride": 1,
+  "max_per_role": 242,
+  "num_images": 242,
+  "images": [
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00000_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0000.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00001_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0001.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00002_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0002.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00003_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0003.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00004_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0004.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00005_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0005.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00006_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0006.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00007_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0007.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00008_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0008.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00009_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0009.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00010_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0010.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00011_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0011.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00012_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0012.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00013_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0013.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00014_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0014.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00015_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0015.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00016_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0016.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00017_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0017.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00018_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0018.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00019_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0019.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00020_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0020.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00021_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0021.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00022_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0022.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00023_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0023.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00024_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0024.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00025_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0025.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00026_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0026.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00027_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0027.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00028_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0028.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00029_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0029.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00030_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0030.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00031_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0031.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00032_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0032.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00033_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0033.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00034_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0034.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00035_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0035.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00036_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0036.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00037_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0037.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00038_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0038.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00039_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0039.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00040_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0040.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00041_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0041.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00042_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0042.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00043_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0043.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00044_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0044.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00045_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0045.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00046_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0046.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00047_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0047.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00048_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0048.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00049_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0049.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00050_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0050.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00051_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0051.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00052_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0052.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00053_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0053.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00054_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0054.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00055_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0055.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00056_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0056.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00057_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0057.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00058_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0058.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00059_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0059.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00060_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0060.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00061_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0061.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00062_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0062.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00063_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0063.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00064_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0064.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00065_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0065.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00066_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0066.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00067_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0067.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00068_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0068.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00069_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0069.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00070_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0070.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00071_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0071.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00072_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0072.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00073_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0073.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00074_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0074.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00075_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0075.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00076_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0076.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00077_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0077.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00078_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0078.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00079_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0079.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00080_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0080.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00081_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0081.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00082_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0082.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00083_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0083.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00084_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0084.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00085_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0085.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00086_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0086.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00087_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0087.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00088_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0088.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00089_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0089.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00090_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0090.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00091_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0091.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00092_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0092.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00093_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0093.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00094_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0094.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00095_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0095.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00096_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0096.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00097_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0097.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00098_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0098.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00099_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0099.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00100_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0100.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00101_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0101.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00102_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0102.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00103_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0103.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00104_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0104.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00105_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0105.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00106_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0106.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00107_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0107.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00108_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0108.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00109_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0109.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00110_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0110.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00111_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0111.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00112_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0112.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00113_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0113.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00114_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0114.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00115_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0115.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00116_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0116.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00117_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0117.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00118_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0118.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00119_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0119.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00120_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0120.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00121_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0121.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00122_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0122.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00123_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0123.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00124_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0124.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00125_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0125.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00126_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0126.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00127_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0127.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00128_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0128.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00129_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0129.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00130_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0130.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00131_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0131.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00132_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0132.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00133_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0133.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00134_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0134.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00135_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0135.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00136_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0136.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00137_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0137.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00138_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0138.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00139_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0139.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00140_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0140.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00141_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0141.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00142_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0142.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00143_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0143.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00144_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0144.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00145_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0145.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00146_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0146.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00147_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0147.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00148_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0148.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00149_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0149.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00150_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0150.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00151_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0151.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00152_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0152.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00153_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0153.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00154_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0154.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00155_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0155.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00156_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0156.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00157_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0157.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00158_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0158.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00159_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0159.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00160_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0160.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00161_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0161.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00162_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0162.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00163_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0163.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00164_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0164.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00165_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0165.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00166_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0166.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00167_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0167.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00168_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0168.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00169_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0169.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00170_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0170.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00171_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0171.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00172_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0172.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00173_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0173.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00174_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0174.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00175_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0175.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00176_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0176.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00177_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0177.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00178_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0178.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00179_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0179.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00180_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0180.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00181_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0181.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00182_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0182.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00183_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0183.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00184_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0184.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00185_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0185.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00186_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0186.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00187_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0187.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00188_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0188.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00189_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0189.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00190_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0190.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00191_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0191.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00192_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0192.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00193_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0193.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00194_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0194.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00195_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0195.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00196_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0196.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00197_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0197.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00198_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0198.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00199_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0199.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00200_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0200.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00201_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0201.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00202_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0202.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00203_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0203.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00204_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0204.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00205_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0205.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00206_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0206.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00207_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0207.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00208_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0208.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00209_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0209.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00210_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0210.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00211_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0211.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00212_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0212.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00213_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0213.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00214_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0214.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00215_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0215.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00216_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0216.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00217_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0217.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00218_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0218.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00219_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0219.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00220_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0220.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00221_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0221.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00222_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0222.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00223_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0223.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00224_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0224.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00225_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0225.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00226_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0226.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00227_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0227.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00228_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0228.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00229_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0229.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00230_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0230.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00231_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0231.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00232_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0232.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00233_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0233.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00234_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0234.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00235_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0235.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00236_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0236.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00237_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0237.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00238_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0238.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00239_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0239.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00240_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0240.jpg"
+    },
+    {
+      "role": "base_camera",
+      "source": "background/source_images/base_camera/00241_CH27152011E.jpg",
+      "output": "background/nerfstudio_input/images/base_camera_0241.jpg"
+    }
+  ]
+}

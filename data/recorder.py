@@ -10,9 +10,10 @@ except ImportError:
     torch = None
 
 class HDF5Recorder:
-    def __init__(self, robot="piper", mode="joint", save_dir="datasets"):
+    def __init__(self, robot="piper", mode="joint", backend="sim", save_dir="datasets"):
         self.robot = robot
         self.mode = mode
+        self.backend = backend
         self.save_dir = save_dir
         os.makedirs(save_dir, exist_ok=True)
         self.is_recording = False
@@ -30,10 +31,10 @@ class HDF5Recorder:
         self.reset_buffers()
         self.start_time = time.time()
         
-        # 自动命名逻辑: piper_{mode}_recording_xxx
+        # 自动命名逻辑: <robot>_<control_mode>_<backend>_<trajectory_id>.hdf5
         idx = 0
         while idx < 1000:
-            name = f"{self.robot}_{self.mode}_recording_{idx:03d}"
+            name = f"{self.robot}_{self.mode}_{self.backend}_{idx:03d}"
             path = os.path.join(self.save_dir, f"{name}.hdf5")
             if not os.path.exists(path):
                 self.episode_name = name

@@ -3,6 +3,10 @@ import numpy as np
 from mani_skill.agents.registration import register_agent
 from mani_skill.agents.controllers import PDJointPosControllerConfig, PDEEPoseControllerConfig
 from robot.base_arm import BaseArm, BaseArmActionWrapper
+from robot.piper.gripper import (
+    PIPER_GRIPPER_MAX_WIDTH,
+    piper_gripper_width_to_qpos,
+)
 from mani_skill.sensors.camera import CameraConfig
 import sapien.core as sapien
 
@@ -22,10 +26,12 @@ class PiperActionWrapper(BaseArmActionWrapper):
         action = np.array(action, dtype=np.float32)
         arm_cmd = action[:6]
         if self.binary_gripper:
-            gripper_val = 0.035 if action[6] > self.threshold else 0.0
+            gripper_val = PIPER_GRIPPER_MAX_WIDTH if action[6] > self.threshold else 0.0
         else:
-            gripper_val = np.clip(action[6], 0.0, 0.035)
-        return np.append(arm_cmd, [gripper_val, gripper_val]).astype(np.float32)
+            gripper_val = np.clip(action[6], 0.0, PIPER_GRIPPER_MAX_WIDTH)
+        # 策略侧只输出一个夹爪宽度；ManiSkill/URDF 里左右夹爪是两个反向 prismatic joint。
+        # 这里统一把真实夹爪宽度转换成 joint7/joint8 的 qpos，避免各采集脚本重复写映射。
+        return np.concatenate([arm_cmd, piper_gripper_width_to_qpos(gripper_val)]).astype(np.float32)
 
     def move_to_p(self, now_pose, now_joint_angle, target_pose):
         '''
@@ -64,24 +70,22 @@ class PiperActionWrapper(BaseArmActionWrapper):
         
         return next_action
     
-@register_agent()
-class PiperArm(BaseArm):
-    uid = "piper_arm"
-    urdf_path = "robot/piper/piper_assets/urdf/piper_description.urdf" 
+class _PiperArmBase(BaseArm):
+    urdf_path = "robot/piper/piper_assets/urdf/piper_description_with_camera_right.urdf"
 
     @property
     def _sensor_configs(self):
         """
         设置双视角相机配置。
-        参考：外部摄像机 + 腕部手眼摄像机
+        front_view 保持外部主视角；hand_camera 挂载到 URDF 的 hand_cam
+        固定坐标系，和真实腕部相机安装方式保持机械一致。
         """
-        # 查找 link6 (法兰端点)
-        mount_link = None
+        hand_mount = None
         if hasattr(self, "robot") and self.robot is not None:
             try:
-                mount_link = self.robot.find_link_by_name("link6")
-            except:
-                pass
+                hand_mount = self.robot.find_link_by_name("hand_cam")
+            except Exception:
+                hand_mount = None
         
         cameras = [
             # 1. 外部主视角 (固定在世界坐标系)
@@ -92,23 +96,17 @@ class PiperArm(BaseArm):
             ),
         ]
         
-        # 2. 手眼摄像机 (挂载在第6关节法兰上，指向法兰夹爪末端)
-        if mount_link is not None:
+        if hand_mount is not None:
+            # 标定外参已经写进 URDF 的 link6 -> hand_cam 固定关节。
+            # CameraConfig 这里只做“挂载到 hand_cam”，pose 必须保持 identity，避免外参叠加两次。
             cameras.append(CameraConfig(
                 uid="hand_camera",
-                mount=mount_link,
-                # 相对于 link6 的位置：法兰中心
-                # 四元数：指向法兰夹爪末端 (局部 Y 轴正方向)
-                pose=sapien.Pose(p=[-0.075,0,0.035], q=[0.866,0,-0.5,0]),
-                width=320, height=240, fov=1.2, near=0.01, far=5
+                mount=hand_mount,
+                pose=sapien.Pose(),
+                width=640, height=480, fov=1.2, near=0.01, far=5
             ))
         else:
-            # 备选方案：如果找不到 link6，使用固定摄像机
-            cameras.append(CameraConfig(
-                uid="hand_camera",
-                pose=sapien.Pose(p=[0.3, 0, 0.3], q=[0.707, 0, 0, -0.707]), 
-                width=320, height=240, fov=1.2, near=0.01, far=5
-            ))
+            print(f"[{self.__class__.__name__}] Warning: hand_cam link not found; hand_camera sensor is disabled.")
         
         return cameras
 
@@ -134,9 +132,32 @@ class PiperArm(BaseArm):
         )
         gripper_pd = PDJointPosControllerConfig(
             joint_names=["joint7", "joint8"],
-            lower=0.0, upper=0.035, stiffness=500, damping=50, normalize_action=False, drive_mode="force"
+            lower=np.array([0.0, -PIPER_GRIPPER_MAX_WIDTH], dtype=np.float32),
+            upper=np.array([PIPER_GRIPPER_MAX_WIDTH, 0.0], dtype=np.float32),
+            stiffness=500, damping=50, normalize_action=False, drive_mode="force"
         )
         return dict(
             pd_joint_pos=dict(arm=arm_pd, gripper=gripper_pd),
             pd_ee_pose=dict(arm=arm_ik, gripper=gripper_pd)
         )
+
+
+@register_agent()
+class PiperRightArm(_PiperArmBase):
+    # 右手模型使用右腕真实标定后的 hand_camera_joint。
+    uid = "piper_arm_right"
+    urdf_path = "robot/piper/piper_assets/urdf/piper_description_with_camera_right.urdf"
+
+
+@register_agent()
+class PiperLeftArm(_PiperArmBase):
+    # 左手模型使用左腕真实标定后的 hand_camera_joint。
+    uid = "piper_arm_left"
+    urdf_path = "robot/piper/piper_assets/urdf/piper_description_with_camera_left.urdf"
+
+
+@register_agent()
+class PiperArm(PiperRightArm):
+    """Backward-compatible single-arm Piper, now explicitly the right hand."""
+
+    uid = "piper_arm"

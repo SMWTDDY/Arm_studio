@@ -19,8 +19,8 @@ env = PiperConveyorEnv(
 
 print("✅ 环境创建成功")
 print("✅ 摄像机可视化标记已添加到场景中")
-print("   - 红色大方块(10cm): 手眼摄像机位置 (link6法兰)")
-print("   - 绿色粗棒(30cm): 法兰方向指示器 (沿Y轴正方向)")
+print("   - 手眼摄像机现在挂载在 URDF 的 hand_cam 坐标系")
+print("   - 可见相机头由 link6 上的 camera_v3.dae 提供")
 
 # 重置环境
 obs, _ = env.reset()
@@ -58,6 +58,16 @@ for i in range(3):
     cv2.putText(front_bgr, f"Front View ({pose_name})", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
     cv2.putText(hand_bgr, f"Hand Camera ({pose_name})", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
     
+    if front_bgr.shape[0] != hand_bgr.shape[0]:
+        target_h = min(front_bgr.shape[0], hand_bgr.shape[0])
+        def resize_to_height(img, height):
+            scale = height / img.shape[0]
+            width = max(1, int(round(img.shape[1] * scale)))
+            return cv2.resize(img, (width, height), interpolation=cv2.INTER_AREA)
+
+        front_bgr = resize_to_height(front_bgr, target_h)
+        hand_bgr = resize_to_height(hand_bgr, target_h)
+
     # 拼接
     combined = np.hstack([front_bgr, hand_bgr])
     
@@ -68,7 +78,6 @@ for i in range(3):
 
 print("\n💡 查看结果:")
 print(f"   打开 {output_dir}/ 目录查看生成的图像")
-print("   红色大方块应该在link6位置随机器人移动")
-print("   绿色粗棒应该在link6前方0.2米处指示方向")
+print("   hand_camera 应该跟随 URDF hand_cam，并朝向夹爪/作业区域")
 
 env.close()

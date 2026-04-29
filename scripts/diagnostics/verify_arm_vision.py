@@ -162,7 +162,7 @@ def main(duration_seconds=300):
         print(f"   - 运行时间: {elapsed:.1f}s")
         print(f"   - 平均 FPS: {total_frames / elapsed:.1f}")
         print(f"   - 图像目录: {os.path.abspath(output_dir)}")
-        print(f"\n💡 查看结果: python scripts/view_frames.py")
+        print(f"\n💡 查看结果: python scripts/diagnostics/view_frames.py")
 
 if __name__ == "__main__":
     import argparse

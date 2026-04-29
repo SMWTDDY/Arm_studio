@@ -1,0 +1,22 @@
+# Unified Piper entrypoint: Arm_studio ManiSkill dual-arm simulation.
+#
+# Current implementation composes two single-arm Arm_studio scenes behind the
+# dual-arm protocol. The obs/action format matches real dual Piper data.
+
+backend: sim
+arm_mode: dual
+control_mode: joint
+hz: 32
+
+sim:
+  arm_studio_root: ../Arm_studio
+  env_name: PiperConveyor-v0
+  obs_mode: rgb+state
+  render_mode: rgb_array
+  left_robot_uids: piper_arm_left
+  right_robot_uids: piper_arm_right
+  binary_gripper: false
+  camera_roles:
+    - base_camera
+    - left_hand_camera
+    - right_hand_camera

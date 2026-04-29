@@ -1,0 +1,55 @@
+# Piper Environment Configuration
+
+robots:
+  single:
+    master_can: "can_ml"
+    follower_can: "can_sl"
+    init_joint_pos: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    init_gripper_pos: 0.05
+
+common:
+  # pyAgxArm >= 1.0.0 supports firmware-aware Piper drivers:
+  # default: <= S-V1.8-2, v183: S-V1.8-3 ~ S-V1.8-7, v188: >= S-V1.8-8.
+  robot_model: "piper"
+  firmware_version: "v183"
+  default_hz: 30
+  default_control_mode: "joint"  # options: "joint", "pose", "delta_pose", "relative_pose_chunk"
+  init_wait_time: 3.0
+  relative_pose_chunk_size: 8
+  teleop_debounce_sec: 0.5
+  master_gripper_jump_threshold_m: 0.04
+  master_gripper_confirm_frames: 6
+  master_gripper_zero_epsilon_m: 0.001
+  master_gripper_zero_guard_threshold_m: 0.03
+  master_read_hz: 60
+  master_follow: false
+  sync_joint_threshold_rad: 0.12
+  sync_pose_threshold: 0.03
+
+cameras:
+  nodes:
+    - serial_number: "CH27152011E"
+      camera_type: "orbbec"
+      camera_backend: "auto"
+      camera_format: "MJPG"
+      auto_exposure: true
+      gain: 0
+      enable_depth: true
+      depth_required: false
+      rotate_degrees: 180
+      role: "base_camera"
+    - serial_number: "CH28822007C"
+      camera_type: "orbbec"
+      camera_backend: "auto"
+      camera_format: "MJPG"
+      auto_exposure: true
+      gain: 0
+      enable_depth: true
+      depth_required: false
+      role: "wrist_camera"
+
+  source_resolution: [640, 480]
+  crop_resolution: [224, 224]
+  fps: 30
+  enable_depth: true
+  depth_required: false

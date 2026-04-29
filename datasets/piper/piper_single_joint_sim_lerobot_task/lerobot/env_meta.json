@@ -1,0 +1,43 @@
+{
+  "obs": {
+    "state": {
+      "joint_pos": [
+        6
+      ],
+      "joint_vel": [
+        6
+      ],
+      "ee_pose": [
+        6
+      ],
+      "gripper_pos": [
+        1
+      ]
+    },
+    "under_control": {
+      "single": [
+        1
+      ]
+    },
+    "rgb": {
+      "front_view": [
+        3,
+        240,
+        320
+      ],
+      "hand_camera": [
+        3,
+        240,
+        320
+      ]
+    }
+  },
+  "action": {
+    "arm": [
+      6
+    ],
+    "gripper": [
+      1
+    ]
+  }
+}

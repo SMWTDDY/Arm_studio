@@ -1,0 +1,8 @@
+-r requirements-base.txt
+python-can
+pyrealsense2
+# Optional Orbbec depth SDK:
+#   pip install -e third_party/pyorbbecsdk
+# Piper hardware SDK is kept as local source:
+#   pip install -e pyAgxArm
+

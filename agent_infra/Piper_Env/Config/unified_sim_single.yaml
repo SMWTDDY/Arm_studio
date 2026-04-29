@@ -1,0 +1,17 @@
+# Unified Piper entrypoint: Arm_studio ManiSkill single-arm simulation.
+
+backend: sim
+arm_mode: single
+control_mode: joint
+hz: 32
+
+sim:
+  arm_studio_root: ../Arm_studio
+  env_name: PiperConveyor-v0
+  obs_mode: rgb+state
+  render_mode: rgb_array
+  robot_uids: piper_arm_right
+  binary_gripper: false
+  camera_roles:
+    - base_camera
+    - wrist_camera

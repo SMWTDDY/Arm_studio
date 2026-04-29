@@ -20,7 +20,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/base_link.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/base_link.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -29,7 +29,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://piper_description/meshes/base_link.STL" />
+                <mesh filename="robot/piper/piper_assets/meshes/base_link.STL" />
             </geometry>
         </collision>
     </link>
@@ -51,7 +51,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link1.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/link1.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -60,7 +60,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 1.5708" />
             <geometry>
-                <mesh filename="package://piper_description/meshes/link1.STL" />
+                <mesh filename="robot/piper/piper_assets/meshes/link1.STL" />
             </geometry>
         </collision>
     </link>
@@ -89,7 +89,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link2.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/link2.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -98,7 +98,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0.1" />
             <geometry>
-                <mesh filename="package://piper_description/meshes/link2.STL" />
+                <mesh filename="robot/piper/piper_assets/meshes/link2.STL" />
             </geometry>
         </collision>
     </link>
@@ -127,7 +127,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link3.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/link3.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -136,7 +136,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 -1.75" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/link3.STL" />
+            <mesh filename="robot/piper/piper_assets/meshes/link3.STL" />
         </geometry>
         </collision>
     </link>
@@ -165,7 +165,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link4.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/link4.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -174,7 +174,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/link4.STL" />
+            <mesh filename="robot/piper/piper_assets/meshes/link4.STL" />
         </geometry>
         </collision>
     </link>
@@ -203,7 +203,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link5.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/link5.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -212,7 +212,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 -3.14" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/link5.STL" />
+            <mesh filename="robot/piper/piper_assets/meshes/link5.STL" />
         </geometry>
         </collision>
     </link>
@@ -241,7 +241,7 @@
         <visual>
         <origin xyz="-0.002 -0.008 0" rpy="-1.57 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
+            <mesh filename="robot/piper/piper_assets/meshes/dae/camera_v3.dae"/>
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -250,7 +250,7 @@
         <collision>
         <origin xyz="-0.002 -0.008 0" rpy="-1.57 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
+            <mesh filename="robot/piper/piper_assets/meshes/dae/camera_v3.dae"/>
         </geometry>
         </collision>
     </link>
@@ -279,7 +279,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link7.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/link7.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -288,7 +288,7 @@
         <collision>
         <origin xyz="-0.001 0 0.0003" rpy="0 3.14 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/link7.STL" />
+            <mesh filename="robot/piper/piper_assets/meshes/link7.STL" />
         </geometry>
         </collision>
     </link>
@@ -317,7 +317,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link8.dae" />
+            <mesh filename="robot/piper/piper_assets/meshes/dae/link8.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -326,7 +326,7 @@
         <collision>
         <origin xyz="-0.001 0 0.0003" rpy="3.14 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/link8.STL" />
+            <mesh filename="robot/piper/piper_assets/meshes/link8.STL" />
         </geometry>
         </collision>
     </link>
@@ -336,6 +336,28 @@
         <child link="${namespace}/link8" />
         <axis xyz="0 0 1" />
         <limit lower="-0.05" upper="0" effort="100" velocity="1" />
+    </joint>
+
+    <!-- Right wrist camera optical mount.  The sensor pose lives in this fixed
+         joint so ManiSkill can mount CameraConfig on hand_cam with identity pose. -->
+    <link name="${namespace}/hand_cam">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.001" />
+            <inertia
+                ixx="1e-06"
+                ixy="0"
+                ixz="0"
+                iyy="1e-06"
+                iyz="0"
+                izz="1e-06" />
+        </inertial>
+    </link>
+
+    <joint name="${namespace}/hand_camera_joint" type="fixed">
+        <origin xyz="0.013686479 0.069638234 0.038517091" rpy="0.010509198 -1.200507973 -1.583916315" />
+        <parent link="${namespace}/link6" />
+        <child link="${namespace}/hand_cam" />
     </joint>
 
 </xacro:macro>

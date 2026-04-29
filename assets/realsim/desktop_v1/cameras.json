@@ -1,0 +1,13 @@
+{
+  "scene": "desktop_v1",
+  "created_at": "2026-04-28T19:02:42",
+  "role_by_serial": {
+    "CH27152011E": "base_camera"
+  },
+  "resolution": [
+    640,
+    480
+  ],
+  "intrinsics_status": "TODO: fill calibrated fx/fy/cx/cy for each role",
+  "extrinsics_status": "TODO: fill camera poses after calibration/alignment"
+}

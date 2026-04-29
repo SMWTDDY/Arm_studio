@@ -1,0 +1,11 @@
+# Unified Piper entrypoint: real single-arm backend.
+
+backend: real
+arm_mode: single
+control_mode: joint
+hz: 30
+with_cameras: true
+start_cameras: false
+
+real:
+  config_path: agent_infra/Piper_Env/Config/piper_config.yaml
